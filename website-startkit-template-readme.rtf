@@ -1,0 +1,440 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
+\f3\fswiss\fcharset0 ArialMT;\f4\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red50\green98\blue178;\red0\green0\blue0;
+\red0\green0\blue0;\red122\green122\blue122;\red43\green43\blue43;\red169\green183\blue198;\red174\green181\blue189;
+\red130\green142\blue186;\red128\green125\blue110;\red92\green122\blue184;\red89\green124\blue194;\red186\green186\blue186;
+\red76\green132\blue217;\red50\green57\blue76;\red232\green191\blue106;\red217\green175\blue108;\red255\green255\blue255;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww8140\viewh16280\viewkind0
+\deftab720
+\pard\pardeftab720\sl512\sa320
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 To use this starter project, you'll need the following things installed on your machine.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl512
+\ls1\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}{\field{\*\fldinst{HYPERLINK "http://jekyllrb.com/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Jekyll}}\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  - 
+\f1\fs28 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 $ gem install jekyll
+\f0\fs32 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls1\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}{\field{\*\fldinst{HYPERLINK "http://nodejs.org/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 NodeJS}}\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  - use the installer.\
+\ls1\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}{\field{\*\fldinst{HYPERLINK "https://github.com/gulpjs/gulp"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 GulpJS}}\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  - 
+\f1\fs28 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 $ npm install -g gulp
+\f0\fs32 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  (mac users may need sudo)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs48 \cf0 \kerning1\expnd0\expndtw0 \ul \ulc0 \outl0\strokewidth0 \
+Base Website\ulnone \
+\
+
+\fs36 Tools:\
+A - Jekyll\
+B - Jade\
+C - SASS\
+D - Autoprefixer\
+E - Browser Sync\
+\
+Follow along on youtube with Devtips video 
+\f3\fs40 \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 \uc0\u8234 Design + Code \'96 Hour 4.1: Project Setup (using Gulp)\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8236 \
+https://youtu.be/nY4kQssg3lw\
+
+\f2\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+1. Download ShakyShanes repo from github onto the desktop\
+{\field{\*\fldinst{HYPERLINK "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"}}{\fldrslt https://github.com/shakyShane/jekyll-gulp-sass-browser-sync}}\
+\
+2. install Jekyll onto the your machine (Mac user use sudo then cmd)\
+\
+3. install NodeJS if you haven\'92t already. nodejs.org\
+\
+4. install Gulp 
+\f1\fs28 \cf2 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 npm install -g gulp\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Gulp is the technology that will manage the dependencies and run task for us such as do things like build the site,  including sass and jade \
+\
+5. now cd into the file you downloaded from shakyshane (which i placed into the folder i will be working with) once your inside the file, cmd line run: npm install \
+\
+once thats done.. open in webStorm the file thats named \'93package.json\'94\
+\
+in there you should see the dependencies that say gulp, gulp-sass, browser-sync and gulp-autoprefixer.\
+\
+what these depencies does is that it looks into the gulpfile.js file and uses the tools that shakyshane has made and also use the tools we will create.\
+To enact this and make it work you have to run on the cmd line one word: gulp\
+\
+6. now cmd line run: nom install gulp-jade \'97save-dev\
+\
+now if you look into the package.json file you\'92ll see two new dependencies gulp-jade and gulp-sass.\
+\
+7. now open the gulpfile.js and we will need to create the task that will allow us to use gulp.\
+\
+8. declare var jade to top of gulpfile\
+then write the gulp.task that invokes the var jade we just created:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf6 \cb7 /*\uc0\u8232 Juan is trying to gulp stuff\u8232  */\u8232 //invoke task jade we just created at top of page\u8232 \cf8 gulp\cf9 .\cf10 task\cf9 (
+\f4\b \cf11 'jade'
+\f1\b0 \cf12 , 
+\f4\b function 
+\f1\b0 \cf9 () \{\uc0\u8232     \cf6 //when jade is ran we want it to return a few things\uc0\u8232     
+\f4\b \cf12 return 
+\f1\b0 \cf8 gulp\cf9 .\cf10 src\cf9 (
+\f4\b \cf11 '_jadefiles/*.jade'
+\f1\b0 \cf9 )\uc0\u8232         \cf6 //turn these files into html files\uc0\u8232         \cf9 .pipe(\cf8 jade\cf9 ())\uc0\u8232         \cf6 //then pipe them into the destination file _includes\uc0\u8232         \cf9 .pipe(\cf8 gulp\cf9 .\cf10 dest\cf9 (
+\f4\b \cf11 '_includes'
+\f1\b0 \cf9 ))\cf12 ;\uc0\u8232 \cf9 \})\cf12 ;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+9. create another folder named _jadefiles.\
+\
+10. in the gulpfile now create a gulp.watch to keep an eye out for the _jadefiles and when something happens there go ahead and run jade.\
+\
+\
+Ok now we have a task created and watching for a change to the file and when it sees something new grab a few things and pipe them into the corresponding files so that the website runs seamlessly when developing. \
+To test this theory go ahead an create a test file in _jadefiles \
+call it hello.jade.\
+now run gulp on the cmd line\
+if you look into your _includes file you\'92ll see a new file called hello.html\
+if you see this PRESTO you code is working flawlessly and how you want it to work.\
+\
+11. Getting ORGANIZED\'85 Lets clean the Theme UP!\
+\
+12. delete folder _posts\
+delete post.html in _layouts folder\
+\
+13. open _sass folder and move contents into css folder\
+\
+14. delete _scss folder\
+\
+15. create assets folder\
+and move css folder into assets folder\
+\
+15. inside assets folder \
+create img folder\
+create js folder\
+\
+16. inside css folder \
+create 0-tools folder\
+create 1-base folder\
+create 2-modules folder\
+create 3-layouts folder\
+\
+17. 0-tools file are for resets so \
+move _resets.scss file into 0-tools folder\
+\
+18 delete _syntax.scss file we don\'92t need it.\
+leaving only main.css and main.scss files outside all other folders inside css folder\'85EVER!\
+\
+19. Open main.scss file \
+delete  \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf13 \cb7 @import 
+\f4\b \cf11 \cb7 "syntax"
+\f1\b0 \cf12 ;\uc0\u8232 \u8232 \cf13 \cb7 body \cf9 \cb7 \{\uc0\u8232     \cf14 \cb7 background\cf9 \cb7 : \cf15 \cb7 white\cf12 \cb7 ;\uc0\u8232 \u8232 \cf9 \}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 we don\'92t need this.\
+\
+make sure that the import cmd corresponds correctly to the new file structure. i.e.\
+@imports \'930-tools/reset\'94;\
+\
+20. inside gulpfile update where and make sure the functions point the correct folder i.e.:\
+from (wrong)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf0 \cb16 gulp\cb7 .\cf10 \cb7 task\cf9 (
+\f4\b \cf11 'sass'
+\f1\b0 \cf12 , 
+\f4\b function 
+\f1\b0 \cf9 () \{\uc0\u8232     
+\f4\b \cf12 return 
+\f1\b0 \cf9 \cb16 gulp\cf9 \cb7 .\cf10 src\cf9 (
+\f4\b \cf11 '_scss/main.scss'
+\f1\b0 \cf9 )\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+to (correct)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf8 \cb7 gulp\cf9 .\cf10 task\cf9 (
+\f4\b \cf11 'sass'
+\f1\b0 \cf12 , 
+\f4\b function 
+\f1\b0 \cf9 () \{\uc0\u8232     
+\f4\b \cf12 return 
+\f1\b0 \cf8 gulp\cf9 .\cf10 src\cf9 (
+\f4\b \cf11 'assets/css/main.scss'
+\f1\b0 \cf9 )\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+followed by right below changing the includePath to look in the css file we just made i.e.:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf10 \cb7 includePaths\cf9 : [
+\f4\b \cf11 'css'
+\f1\b0 \cf9 ]\cf12 ,\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+followed by correcting the pipe gulp destination to i.e.:\
+wrong\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf0 \cb7 .pipe(\cf8 \cb7 gulp\cf9 .\cf10 dest\cf9 (
+\f4\b \cf11 '_site/css'
+\f1\b0 \cf9 ))\uc0\u8232 .pipe(\cf8 browserSync\cf9 .\cf10 reload\cf9 (\{\cf10 stream\cf9 :
+\f4\b \cf12 true
+\f1\b0 \cf9 \}))\uc0\u8232 .pipe(\cf8 gulp\cf9 .\cf10 dest\cf9 (
+\f4\b \cf11 'css'
+\f1\b0 \cf9 ))\cf12 ;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+correct\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf0 \cb7 .pipe(\cf8 \cb7 gulp\cf9 .\cf10 dest\cf9 (
+\f4\b \cf11 '_site/assets/css'
+\f1\b0 \cf9 ))\uc0\u8232 .pipe(\cf8 browserSync\cf9 .\cf10 reload\cf9 (\{\cf10 stream\cf9 :
+\f4\b \cf12 true
+\f1\b0 \cf9 \}))\uc0\u8232 .pipe(\cf8 gulp\cf9 .\cf10 dest\cf9 (
+\f4\b \cf11 'assets/css'
+\f1\b0 \cf9 ))\cf12 ;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+21. Update new css file location in _layouts folder inside the defaults.html file to look for the right location i.e.:\
+wrong\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf17 \cb7 <link \cf14 \cb7 rel=\cf15 "stylesheet" \cf14 href=\cf15 "/css/main.css"\cf17 \cb7 >\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+correct\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf17 \cb7 <link \cf14 \cb7 rel=\cf15 "stylesheet" \cf14 href=\cf15 "/assets/css/main.css"\cf17 \cb7 >\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+\
+============================================================================\
+\
+\
+Follow along on youtube with devtips video 
+\f3\fs40 \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 \uc0\u8234 Design + Code \'96 Hour 4.2: Project Cleanup\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8236 \
+
+\f2\fs36 https://youtu.be/Wm-BhGoaD70\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+1. Start in _layouts folder inside the defaults.html file.\
+delete header and footer that we didn\'92t create and do not want.\
+\
+from (wrong)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf17 \cb7 <!DOCTYPE \cf14 \cb7 html\cf17 \cb7 >\uc0\u8232 <html>\u8232     <head>\u8232         <meta \cf14 \cb7 charset=\cf15 "utf-8"\cf17 \cb7 >\uc0\u8232         <meta \cf14 \cb7 http-equiv=\cf15 "X-UA-Compatible" \cf14 content=\cf15 "IE=edge,chrome=1"\cf17 \cb7 >\uc0\u8232         <title>\cf9 \cb7 \{\{ page.title \}\}\cf17 \cb7 </title>\uc0\u8232         <meta \cf14 \cb7 name=\cf15 "viewport" \cf14 content=\cf15 "width=device-width"\cf17 \cb7 >\uc0\u8232 \u8232         \cf6 \cb7 <!-- Custom CSS -->\uc0\u8232         \cf17 \cb7 <link \cf14 \cb7 rel=\cf15 "stylesheet" \cf14 href=\cf15 "/assets/css/main.css"\cf17 \cb7 >\uc0\u8232 \u8232     </head>\u8232     <body>\u8232 \u8232         <div \cf14 \cb7 class=\cf15 "site"\cf17 \cb7 >\uc0\u8232           <div \cf14 \cb7 class=\cf15 "header"\cf17 \cb7 >\uc0\u8232             <h1 \cf14 \cb7 class=\cf15 "title"\cf17 \cb7 ><a \cf14 \cb7 href=\cf15 "/"\cf17 \cb7 >\cf9 \cb7 \{\{ site.name \}\}\cf17 \cb7 </a></h1>\uc0\u8232             <a \cf14 \cb7 class=\cf15 "extra" \cf14 href=\cf15 "/"\cf17 \cb7 >\cf9 \cb7 home\cf17 \cb7 </a>\uc0\u8232           </div>\u8232 \u8232           \cf9 \cb7 \{\{ content \}\}\uc0\u8232 \u8232 \u8232           \cf17 \cb7 <div \cf14 \cb7 class=\cf15 "footer"\cf17 \cb7 >\uc0\u8232             <div \cf14 \cb7 class=\cf15 "contact"\cf17 \cb7 >\uc0\u8232               <p>\u8232                 \cf9 \cb7 Your Name is\cf17 \cb7 <br />\uc0\u8232                 \cf9 \cb7 What You Are\cf17 \cb7 <br />\uc0\u8232                 \cf9 \cb7 you@example.com\uc0\u8232               \cf17 \cb7 </p>\uc0\u8232             </div>\u8232             <div \cf14 \cb7 class=\cf15 "contact"\cf17 \cb7 >\uc0\u8232               <p>\u8232                 <a \cf14 \cb7 href=\cf15 "https://github.com/yourusername"\cf17 \cb7 >\cf9 \cb7 github.com/yourusername\cf17 \cb7 </a><br />\uc0\u8232                 <a \cf14 \cb7 href=\cf15 "https://twitter.com/yourusername"\cf17 \cb7 >\cf9 \cb7 twitter.com/yourusername\cf17 \cb7 </a><br />\uc0\u8232               </p>\u8232             </div>\u8232           </div>\u8232         </div>\u8232 \u8232     </body>\u8232 </html>\u8232 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+to this (correct)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf17 \cb7 <!DOCTYPE \cf14 \cb7 html\cf17 \cb7 >\uc0\u8232 <html>\u8232     <head>\u8232         <meta \cf14 \cb7 charset=\cf15 "utf-8"\cf17 \cb7 >\uc0\u8232         <meta \cf14 \cb7 http-equiv=\cf15 "X-UA-Compatible" \cf14 content=\cf15 "IE=edge,chrome=1"\cf17 \cb7 >\uc0\u8232         <title>\cf9 \cb7 \{\{ page.title \}\}\cf17 \cb7 </title>\uc0\u8232         <meta \cf14 \cb7 name=\cf15 "viewport" \cf14 content=\cf15 "width=device-width"\cf17 \cb7 >\uc0\u8232         \cf6 \cb7 <!-- Custom CSS -->\uc0\u8232         \cf17 \cb7 <link \cf14 \cb7 rel=\cf15 "stylesheet" \cf14 href=\cf15 "/assets/css/main.css"\cf17 \cb7 >\uc0\u8232     </head>\u8232     <body>\u8232 \u8232           \cf9 \cb7 \{\{ content \}\}\uc0\u8232 \u8232     \cf17 \cb7 </body>\uc0\u8232 </html>\u8232 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+2. Rename project file name to:\
+website-startkit-template\
+\
+3. Delete reset.scss file located in /assets/css/0-tools.\
+\
+we didn\'92t really know what that was for and we didn\'92t want it in the first place so will need to create our own.\
+ \
+4.Delete main.css file located in /assets/css\
+ leaving only the main.scss file.\
+\
+5. lets create our tools by googling normalize css and going to the navigate to website:\
+{\field{\*\fldinst{HYPERLINK "https://necolas.github.io/normalize.css/"}}{\fldrslt https://necolas.github.io/normalize.css/}}\
+\
+you can try doing it through npm but we don\'92t want it as a package we just want it as a plain css file, so download the file and save as into the project folder i.e.: \
+/website-starterkit-template/assets/css/0-tools\
+\
+6. rename normalize file ie:\
+\
+from (wrong)\
+normalize.css\
+\
+to (correct)\
+normailze.scss\
+\
+this was done because remember that main.css file we deleted well we are now just using the main.scss and this is how it will correspond with each other.\
+\
+7. inside main.scss file lets change file path its looking to import from i.e.:\
+\
+from (wrong)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf13 \cb7 @import 
+\f4\b \cf11 \cb7 "0-tools/reset"
+\f1\b0 \cf12 ;
+\f2\fs36 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 to (correct)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf13 \cb7 @import 
+\f4\b \cf11 \cb7 "0-tools/normalize"
+\f1\b0 \cf12 ;
+\f2\fs36 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+8. also, create a new import for bourbon:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf13 \cb7 @import 
+\f4\b \cf11 \cb7 "0-tools/bourbon/bourbon"
+\f1\b0 \cf12 ;
+\f2\fs36 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+now go to terminal and cd into the 0-tools folder and type cmd line: \
+sudo gem install bourbon\
+\
+once bourbon downloads you will need to install it inside the 0-tools folder so run cmd line:\
+bourbon install\
+\
+9. Next create a new file in 1-base folder called\
+_base.sass\
+\
+inside that file copy+paste file Travis create for us and lets us use located in:\
+{\field{\*\fldinst{HYPERLINK "https://github.com/travisneilson/Design-Code/blob/master/assets/css/1-base/_base.sass"}}{\fldrslt https://github.com/travisneilson/Design-Code/blob/master/assets/css/1-base/_base.sass}}\
+\
+create another filer there called _vars.sass and c+p from Travises file called _vars.sass from:\
+{\field{\*\fldinst{HYPERLINK "https://github.com/travisneilson/Design-Code/blob/master/assets/css/1-base/_vars.sass"}}{\fldrslt https://github.com/travisneilson/Design-Code/blob/master/assets/css/1-base/_vars.sass}}\
+\
+10. we need to re-configure the gulpfile to reflect our new changes to the sass files i.e.:\
+\
+from (wrong)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf8 \cb7 gulp\cf9 .\cf18 \cb7 watch\cf9 \cb7 (
+\f4\b \cf11 '_scss/*.scss'
+\f1\b0 \cf12 , \cf9 [
+\f4\b \cf11 'sass'
+\f1\b0 \cf9 ])\cf12 ;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+to (correct)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf0 \cb16 gulp\cb7 .\cf18 \cb7 watch\cf9 \cb7 (
+\f4\b \cf11 'assets/css/**'
+\f1\b0 \cf12 , \cf9 [
+\f4\b \cf11 'sass'
+\f1\b0 \cf9 ])\cf12 ;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+11. Ok now lets tie it all up by adding the correct imports to the main.css connecting the 1-base files i.e.:\
+\
+****order is important****\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs30 \cf13 \cb7 @import 
+\f4\b \cf11 \cb7 "1-base/vars"
+\f1\b0 \cf12 ;\uc0\u8232 \cf13 \cb7 @import 
+\f4\b \cf11 \cb7 "1-base/base"
+\f1\b0 \cf12 ;\uc0\u8232 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 \cb1 \
+\
+\
+============================================================================\
+\
+\
+\
+Follow along on youtube with devtips video 
+\f3\fs40 \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 \uc0\u8234 Design + Code \'96 Hour 4.3: Setting up a Github Repo\cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8236 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf0 https://youtu.be/RGbxqmjJa64\kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+1.\
+\
+\
+\
+\
+\
+============================================================================\
+\
+\
+Follow along on youtube with devtips video\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat19 \clwWidth15680\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\f3\fs40 \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 \uc0\u8234 Design + Code \'96 Hour 4.4: A Few Final Details\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8236 \cell \lastrow\row
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\fs36 \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 https://youtu.be/dzYuUC0SsXM\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+1. \
+\
+\
+2. let make sure that we are importing the correct fonts from google when using the website on different devices. To do this google \'93google fonts fira sans. click on the website {\field{\*\fldinst{HYPERLINK "https://www.google.com/fonts/specimen/Fira+Sans"}}{\fldrslt https://www.google.com/fonts/specimen/Fira+Sans}}\
+click link on the bottom to open \
+then select the types of fonts you would like to use, i selected normal 400 and normal 400 italic.\
+then select the 3 option to import to your website.\
+C+P the link onto fonts file \
+if you haven\'92t created the file go into the assets/css/0-tools and create a file called fonts.scss. now paste that link there and save i.e.:\
+\
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic);\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
